@@ -1,6 +1,6 @@
 {
   "name": "service-name",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "A middleware, appending a `x-name` header containing the current packages version\"",
   "main": "build/index.cjs.js",
   "module": "build/index.esm.js",
