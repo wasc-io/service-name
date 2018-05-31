@@ -1,0 +1,33 @@
+{
+  "name": "service-name",
+  "version": "1.2.0",
+  "description": "A middleware, appending a `x-name` header containing the current packages version\"",
+  "main": "build/index.cjs.js",
+  "module": "build/index.esm.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wasc-io/service-name"
+  },
+  "author": "Nicolai Schmid <hey@schmid.uno>",
+  "license": "Apache-2.0",
+  "private": false,
+  "scripts": {
+    "bump": "standard-version",
+    "build": "rollup -c",
+    "test": "jest"
+  },
+  "files": [
+    "dist",
+    "docs/",
+    "README.md"
+  ],
+  "dependencies": {
+    "read-pkg-up": "^3.0.0"
+  },
+  "devDependencies": {
+    "jest": "^22.4.2",
+    "rollup": "^0.57.1",
+    "rollup-plugin-commonjs": "^9.1.0",
+    "standard-version": "^4.3.0"
+  }
+}
