@@ -6,9 +6,10 @@ export default (options = {}) => {
       'You might have used the module like `app.use(serviceName)`, but it should be `app.use(serviceName()`',
     );
   }
+  const { name } = pkgUp.sync().packageJson;
 
-  return function version(request, response, next) {
-    response.header('x-name', pkgUp.sync().pkg.name);
+  return function respondName(request, response, next) {
+    response.header('x-name', name);
     next();
   };
 };
